@@ -1,0 +1,24 @@
+[meta]
+name = "yuiop"
+version = "0.1.0"
+description = "Universal wrapper over brew/apt/pacman — qwert package layer"
+type = "qwert"
+
+[check]
+command = "yuiop"
+version_flag = "version"
+
+[install]
+macos = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+debian = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+arch = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+
+[upgrade]
+macos = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+debian = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+arch = "curl -fsSL https://raw.githubusercontent.com/br4zz4/yuiop/main/install.sh | bash"
+
+[uninstall]
+macos = "rm -f ~/.local/bin/yuiop"
+debian = "rm -f ~/.local/bin/yuiop"
+arch = "rm -f ~/.local/bin/yuiop"

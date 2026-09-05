@@ -1,4 +1,5 @@
 [meta]
+depends = ["yuiop"]
 name = "opencode"
 version = "1.0.0"
 description = "AI coding agent for the terminal"

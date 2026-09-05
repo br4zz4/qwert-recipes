@@ -1,4 +1,5 @@
 [meta]
+depends = ["yuiop"]
 name = "tmux"
 version = "1.0.0"
 description = "Terminal multiplexer"

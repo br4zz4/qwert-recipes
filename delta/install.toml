@@ -1,4 +1,5 @@
 [meta]
+depends = ["yuiop"]
 name = "delta"
 version = "1.0.0"
 description = "A syntax-highlighting pager for git diffs"

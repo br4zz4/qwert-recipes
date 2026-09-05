@@ -1,4 +1,5 @@
 [meta]
+depends = ["yuiop"]
 name = "neovim"
 version = "1.0.0"
 description = "Hyperextensible Vim-based text editor"
