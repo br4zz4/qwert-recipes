@@ -1,0 +1,88 @@
+[meta]
+name = "ward"
+version = "1.0.0"
+description = "Hierarchical secrets manager for env vars (envs, vaults, exec)"
+type = "qwert"
+depends = ["asdf"]
+
+[check]
+command = "ward"
+version_flag = "version"
+
+[install]
+macos = '''
+asdf plugin add ward https://github.com/br4zz4/asdf-ward.git >/dev/null 2>&1 || true
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+debian = '''
+asdf plugin add ward https://github.com/br4zz4/asdf-ward.git >/dev/null 2>&1 || true
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+arch = '''
+asdf plugin add ward https://github.com/br4zz4/asdf-ward.git >/dev/null 2>&1 || true
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+
+[upgrade]
+macos = '''
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+debian = '''
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+arch = '''
+version=$(asdf latest ward 2>/dev/null || true)
+if [ -n "$version" ]; then
+  asdf install ward "$version" >/dev/null 2>&1 || true
+  asdf global ward "$version" >/dev/null 2>&1 || true
+  asdf reshim ward >/dev/null 2>&1 || true
+fi
+'''
+
+[uninstall]
+macos = '''
+version=$(asdf current ward 2>/dev/null | awk '{print $2}')
+if [ -n "$version" ]; then
+  asdf uninstall ward "$version" >/dev/null 2>&1 || true
+fi
+rm -f "$HOME/.asdf/shims/ward"
+'''
+debian = '''
+version=$(asdf current ward 2>/dev/null | awk '{print $2}')
+if [ -n "$version" ]; then
+  asdf uninstall ward "$version" >/dev/null 2>&1 || true
+fi
+rm -f "$HOME/.asdf/shims/ward"
+'''
+arch = '''
+version=$(asdf current ward 2>/dev/null | awk '{print $2}')
+if [ -n "$version" ]; then
+  asdf uninstall ward "$version" >/dev/null 2>&1 || true
+fi
+rm -f "$HOME/.asdf/shims/ward"
+'''
