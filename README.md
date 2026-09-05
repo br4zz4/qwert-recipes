@@ -22,10 +22,11 @@ qwert use tmux
 
 ## Estrutura
 
-Cada recipe é um diretório em `recipes/<name>/` com até dois arquivos — ambos opcionais:
+Cada recipe é um diretório `<name>/` na raiz do repo com até dois arquivos — ambos opcionais
+(o qwert clona o catálogo e lê direto de `~/.local/share/qwert/recipes/<name>/`):
 
 ```
-recipes/tmux/
+tmux/
 ├── install.toml   # como instalar/atualizar/remover a ferramenta + metadados
 └── setup.toml     # como configurar pontos (symlinks, cópias, comandos)
 ```
