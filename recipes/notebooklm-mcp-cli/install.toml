@@ -1,0 +1,79 @@
+[meta]
+name = "notebooklm-mcp-cli"
+version = "1.0.0"
+description = "Gemini Notebook (formerly NotebookLM) CLI and MCP server (nlm + notebooklm-mcp)"
+type = "qwert"
+depends = ["asdf"]
+
+[check]
+command = "nlm"
+version_flag = "--version"
+
+[install]
+macos = '''
+asdf plugin add python >/dev/null 2>&1 || true
+if ! python --version 2>/dev/null | grep -qE '3\.(1[1-9]|[2-9][0-9])'; then
+  version=$(asdf latest python 3.12 2>/dev/null || true)
+  if [ -n "$version" ]; then
+    asdf install python "$version" >/dev/null 2>&1 || true
+    asdf global python "$version" >/dev/null 2>&1 || true
+    asdf reshim python >/dev/null 2>&1 || true
+  fi
+fi
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+debian = '''
+asdf plugin add python >/dev/null 2>&1 || true
+if ! python --version 2>/dev/null | grep -qE '3\.(1[1-9]|[2-9][0-9])'; then
+  version=$(asdf latest python 3.12 2>/dev/null || true)
+  if [ -n "$version" ]; then
+    asdf install python "$version" >/dev/null 2>&1 || true
+    asdf global python "$version" >/dev/null 2>&1 || true
+    asdf reshim python >/dev/null 2>&1 || true
+  fi
+fi
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+arch = '''
+asdf plugin add python >/dev/null 2>&1 || true
+if ! python --version 2>/dev/null | grep -qE '3\.(1[1-9]|[2-9][0-9])'; then
+  version=$(asdf latest python 3.12 2>/dev/null || true)
+  if [ -n "$version" ]; then
+    asdf install python "$version" >/dev/null 2>&1 || true
+    asdf global python "$version" >/dev/null 2>&1 || true
+    asdf reshim python >/dev/null 2>&1 || true
+  fi
+fi
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+
+[upgrade]
+macos = '''
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+debian = '''
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+arch = '''
+python -m pip install --upgrade notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+
+[uninstall]
+macos = '''
+python -m pip uninstall -y notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+debian = '''
+python -m pip uninstall -y notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
+arch = '''
+python -m pip uninstall -y notebooklm-mcp-cli
+asdf reshim python >/dev/null 2>&1 || true
+'''
