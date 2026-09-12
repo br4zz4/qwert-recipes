@@ -1,0 +1,10 @@
+[meta]
+name = "fzf"
+version = "1.0.0"
+description = "Command-line fuzzy finder"
+type = "package"
+packages = { brew = "fzf", apt = "fzf", pacman = "fzf" }
+
+[check]
+command = "fzf"
+version_flag = "--version"

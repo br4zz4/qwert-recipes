@@ -6,8 +6,28 @@ macos = [
   "touch ~/.qwert/config/codex/config.toml",
   "ln -sfn ~/.qwert/config/codex/config.toml ~/.codex/config.toml",
 ]
+debian = [
+  "mkdir -p ~/.codex",
+  "mkdir -p ~/.qwert/config/codex",
+  "if [ -f ~/.codex/config.toml ] && [ ! -L ~/.codex/config.toml ] && [ ! -f ~/.qwert/config/codex/config.toml ]; then mv ~/.codex/config.toml ~/.qwert/config/codex/config.toml; fi",
+  "touch ~/.qwert/config/codex/config.toml",
+  "ln -sfn ~/.qwert/config/codex/config.toml ~/.codex/config.toml",
+]
+arch = [
+  "mkdir -p ~/.codex",
+  "mkdir -p ~/.qwert/config/codex",
+  "if [ -f ~/.codex/config.toml ] && [ ! -L ~/.codex/config.toml ] && [ ! -f ~/.qwert/config/codex/config.toml ]; then mv ~/.codex/config.toml ~/.qwert/config/codex/config.toml; fi",
+  "touch ~/.qwert/config/codex/config.toml",
+  "ln -sfn ~/.qwert/config/codex/config.toml ~/.codex/config.toml",
+]
 
 [undo]
 macos = [
+  "rm -f ~/.codex/config.toml",
+]
+debian = [
+  "rm -f ~/.codex/config.toml",
+]
+arch = [
   "rm -f ~/.codex/config.toml",
 ]
