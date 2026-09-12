@@ -15,7 +15,7 @@ debian = [
   "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0",
 ]
 arch = [
-  "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0",
+  "[ -d ~/.asdf/.git ] || git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0",
 ]
 
 [upgrade]
