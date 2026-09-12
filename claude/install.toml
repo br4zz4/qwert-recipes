@@ -1,0 +1,21 @@
+[meta]
+name = "claude"
+version = "1.0.0"
+description = "Anthropic Claude Code — agentic coding in the terminal"
+type = "qwert"
+
+[check]
+command = "claude"
+version_flag = "--version"
+
+[install]
+linux = "npm install -g @anthropic-ai/claude-code"
+macos = "npm install -g @anthropic-ai/claude-code"
+
+[upgrade]
+linux = "npm update -g @anthropic-ai/claude-code"
+macos = "npm update -g @anthropic-ai/claude-code"
+
+[uninstall]
+linux = "npm uninstall -g @anthropic-ai/claude-code"
+macos = "npm uninstall -g @anthropic-ai/claude-code"

@@ -1,10 +1,9 @@
 [meta]
-depends = ["yuiop"]
 name = "opencode"
 version = "1.0.0"
 description = "AI coding agent for the terminal"
-type = "brew"
-pkg = "anomalyco/tap/opencode"
+type = "package"
+packages = { brew = "anomalyco/tap/opencode", pacman = "opencode" }
 
 [check]
 command = "opencode"

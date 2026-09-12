@@ -11,8 +11,20 @@ macos = [
   "ln -sf ~/.qwert/config/zsh/p10k.zsh ~/.p10k.zsh"
 ]
 
+linux = [
+  "mkdir -p ~/.local/share/qwert/hooks/prepare ~/.local/share/qwert/hooks/init",
+  "printf 'if [[ -r \"${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%%):-%%n}.zsh\" ]]; then\\n  source \"${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%%):-%%n}.zsh\"\\nfi\\n' > ~/.local/share/qwert/hooks/prepare/powerlevel10k.sh",
+  "printf 'source \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme\"\\n[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh\\n' > ~/.local/share/qwert/hooks/init/powerlevel10k.sh",
+  "ln -sf ~/.qwert/config/zsh/p10k.zsh ~/.p10k.zsh"
+]
+
 [undo]
 macos = [
+  "rm -f ~/.local/share/qwert/hooks/prepare/powerlevel10k.sh",
+  "rm -f ~/.local/share/qwert/hooks/init/powerlevel10k.sh",
+  "rm -f ~/.p10k.zsh"
+]
+linux = [
   "rm -f ~/.local/share/qwert/hooks/prepare/powerlevel10k.sh",
   "rm -f ~/.local/share/qwert/hooks/init/powerlevel10k.sh",
   "rm -f ~/.p10k.zsh"

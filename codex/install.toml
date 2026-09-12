@@ -1,11 +1,21 @@
 [meta]
-depends = ["yuiop"]
 name = "codex"
 version = "1.0.0"
 description = "OpenAI Codex CLI — coding agent for the terminal"
-type = "brew"
-pkg = "codex"
+type = "qwert"
 
 [check]
 command = "codex"
 version_flag = "--version"
+
+[install]
+linux = "npm install -g @openai/codex"
+macos = "npm install -g @openai/codex"
+
+[upgrade]
+linux = "npm update -g @openai/codex"
+macos = "npm update -g @openai/codex"
+
+[uninstall]
+linux = "npm uninstall -g @openai/codex"
+macos = "npm uninstall -g @openai/codex"

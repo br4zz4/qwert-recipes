@@ -3,6 +3,7 @@ name = "iterm2"
 version = "1.0.0"
 description = "macOS terminal emulator"
 type = "qwert"
+platforms = ["macos"]
 
 [check]
 command = "open"
