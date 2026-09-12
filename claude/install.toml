@@ -9,13 +9,10 @@ command = "claude"
 version_flag = "--version"
 
 [install]
-linux = "npm install -g @anthropic-ai/claude-code"
-macos = "npm install -g @anthropic-ai/claude-code"
+all = "npm install -g @anthropic-ai/claude-code"
 
 [upgrade]
-linux = "npm update -g @anthropic-ai/claude-code"
-macos = "npm update -g @anthropic-ai/claude-code"
+all = "npm update -g @anthropic-ai/claude-code"
 
 [uninstall]
-linux = "npm uninstall -g @anthropic-ai/claude-code"
-macos = "npm uninstall -g @anthropic-ai/claude-code"
+all = "npm uninstall -g @anthropic-ai/claude-code"

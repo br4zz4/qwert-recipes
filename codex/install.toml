@@ -9,13 +9,10 @@ command = "codex"
 version_flag = "--version"
 
 [install]
-linux = "npm install -g @openai/codex"
-macos = "npm install -g @openai/codex"
+all = "npm install -g @openai/codex"
 
 [upgrade]
-linux = "npm update -g @openai/codex"
-macos = "npm update -g @openai/codex"
+all = "npm update -g @openai/codex"
 
 [uninstall]
-linux = "npm uninstall -g @openai/codex"
-macos = "npm uninstall -g @openai/codex"
+all = "npm uninstall -g @openai/codex"
