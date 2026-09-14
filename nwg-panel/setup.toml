@@ -1,0 +1,12 @@
+to = "~/.config/nwg-panel"
+
+arch = [
+  # Config dir com icons/executors — aponta para o repo de dotfiles
+  "[ -e ~/.config/nwg-panel ] && [ ! -L ~/.config/nwg-panel ] && rm -rf ~/.config/nwg-panel || true",
+  "ln -sfn ~/.qwert/config/nwg-panel ~/.config/nwg-panel",
+]
+
+[undo]
+arch = [
+  "rm -f ~/.config/nwg-panel",
+]

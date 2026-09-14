@@ -1,0 +1,11 @@
+[meta]
+name = "nwg-panel"
+version = "1.0.0"
+description = "GTK3 panel for sway and Hyprland — dock, launcher-dots, clock (Tokyo Night purple theme)"
+type = "package"
+packages = { pacman = "nwg-panel" }
+platforms = ["arch"]
+
+[check]
+command = "nwg-panel"
+version_flag = "--version"
