@@ -1,0 +1,23 @@
+# O Thunar guarda preferências no xfconf (não há arquivo de config versionável).
+# Este setup esconde a menubar: o Thunar (4.17.8+) mostra automaticamente o botão
+# hamburger no início do toolbar, que abre o mesmo menu (equivale a F10 / Ctrl+M).
+# O tema de vidro (transparência/blur) fica no recipe gtk-theming.
+
+to = "~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml"
+
+arch = [
+  "xfconf-query -c thunar -p /last-menubar-visible -n -t bool -s false",
+]
+
+debian = [
+  "xfconf-query -c thunar -p /last-menubar-visible -n -t bool -s false",
+]
+
+[undo]
+arch = [
+  "xfconf-query -c thunar -p /last-menubar-visible -n -t bool -s true",
+]
+
+debian = [
+  "xfconf-query -c thunar -p /last-menubar-visible -n -t bool -s true",
+]

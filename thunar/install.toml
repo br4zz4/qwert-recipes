@@ -1,0 +1,11 @@
+[meta]
+name = "thunar"
+version = "1.0.0"
+description = "Thunar file manager — GTK glass theme and hidden menubar (hamburger button)"
+type = "package"
+packages = { apt = "thunar", pacman = "thunar" }
+platforms = ["linux"]
+
+[check]
+command = "thunar"
+version_flag = "--version"
